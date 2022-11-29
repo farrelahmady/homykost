@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-sans;
+    }
+}
+@layer components {
+    .navbar {
+        @apply flex items-center px-32;
+    }
+    nav ul li {
+        @apply font-bold uppercase h-full align-middle mr-12 text-lg;
+    }
+
+    .form-input {
+        @apply flex flex-col gap-1;
+    }
+
+    .form-input input,
+    .form-input select {
+        @apply w-full border-slate-700 border rounded-md p-2;
+    }
+
+    .form-input input[type="checkbox"] {
+        @apply w-fit;
+    }
+
+    .form-input input::placeholder {
+        @apply capitalize;
+    }
+    .form-input label {
+        @apply w-full text-lg capitalize font-medium;
+    }
+
+    .btn {
+        @apply bg-yellow-400 py-2 capitalize font-bold rounded-md hover:bg-yellow-500 hover:text-white;
+    }
+
+    table {
+        @apply w-full border-collapse border-2 border-slate-700;
+    }
+
+    table th,
+    table td {
+        @apply border border-slate-700 p-2 capitalize;
+    }
+
+    .card {
+        @apply flex gap-2 p-4 border border-slate-700 rounded-md;
+    }
+
+    .card > div {
+        @apply flex-1;
+    }
+
+    .card .content h1 {
+        @apply text-2xl font-bold capitalize text-center;
+    }
+    .card .content ul {
+        @apply list-disc list-inside;
+    }
+    .card .content {
+        @apply text-sm font-normal border-yellow-500 border rounded-md p-2 flex flex-col justify-between;
+    }
+}
